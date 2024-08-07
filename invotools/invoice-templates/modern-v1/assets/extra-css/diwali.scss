@@ -1,0 +1,106 @@
+
+//Theme Changing
+@import "../extra-css/aa_date";
+@import "../extra-css/install_mixin";
+@import "../extra-css/_aroot_colors_maroon";
+$theme-secondary:#2e0030;
+@import "../extra-css/_aroot_variables";
+
+@import "../extra-css/install_grid";
+@import "../extra-css/install_reset";
+@import "../extra-css/install_typography";
+
+
+@import "../extra-css/layout"; 
+@import "../extra-css/layout_header"; 
+@import "../extra-css/layout_footer"; 
+@import "../extra-css/layout_nav"; 
+ 
+@import "../extra-css/section_common"; 
+@import "../extra-css/section_invoice";
+@import "../extra-css/section_socialicons";
+@import "../extra-css/section_invoice_exception";
+@import "../extra-css/section_invoice_dark_version4";
+@import "../extra-css/section_z_warhammer";
+
+
+
+@include media-breakpoint-max(1024px) {
+    .container-xl.rounded{border-radius: unset!important;}
+}
+header{
+    background: url('assets/images/season/header-diwali.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @include media-breakpoint-max(768px) {
+        background-size: cover;
+    }
+    @include media-breakpoint-min(769px) {
+        background-size: contain;
+    }
+    @include media-breakpoint-min(1024px) {
+        //min-height: 138px;
+        background-size: cover;
+    }
+    @include media-breakpoint-max(578px) {
+        background-size: unset;
+        background-position: top left;
+    }
+    /* padding:1em 0 ; */    
+
+    .bg-theme-accent{
+        background-color:#a5114a;color:white;       
+    }
+    .logo{
+        background-image: url(./assets/images/logo-white.svg);
+         
+        @include media-breakpoint-max(578px) {
+            height: 120px;
+            margin-bottom:5px!important;
+        }
+        
+    }
+ 
+}
+.header-outer.bg-theme-accent{
+    //background-color:#003255;color:white; margin-top: 0!important;      
+}
+.border-theme-accent{border-color:#a5114a!important;}
+html{
+    //background: url('assets/images/season/bg-vertical-christmas.png');
+/*     background-position:top left;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-attachment: fixed; */
+}
+body{
+    background-color: transparent!important;
+/*     background-color:#4e0451 !important;
+    background: url('assets/images/season/diwali-diya1.png'), url('assets/images/season/bg-vertical-diwali.png');
+    background-position:bottom left,top left ;
+    background-repeat: no-repeat, repeat-x;
+    background-attachment: fixed, fixed;   */ 
+}
+body.py-xl-2{padding-top:0!important ;}
+.container-xl{background-color: $theme-accent-verylight!important;}
+.dark-mode{    
+    background-color: transparent!important;
+    //background-color:#4e0451 !important; 
+    .container-xl{
+        border: 1px solid rgba(0, 0, 0, 0.2)!important;  
+        background-color:$theme-secondary !important; 
+    }
+    
+    header .bg-theme-accent{
+        background-color:#a5114a!important;color:white!important;       
+    }
+    #header-right{
+        p, p a{
+           color: #120013!important; 
+        }
+    }
+    .border-theme-accent{border-top:3px solid #a5114a!important;}
+    .footer-left, .footer-right{background-color: #120013!important;}
+}

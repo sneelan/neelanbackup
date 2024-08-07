@@ -1,0 +1,36 @@
+/* -----------color-shades-start--------------*/
+/* bg-black-100, bg-white-100, text-black-100, text-white-100 */
+@function light-color($color, $amount) {@return mix($white, $color, $amount * 1%);}
+@function dark-color($color, $amount) {@return mix($black, $color, $amount * 1%);}
+
+@mixin generate-light($color, $name, $amount) {
+  .bg-#{$name} {background-color: light-color($color, $amount)!important;}
+  .hover-bg-#{$name}:hover{ background-color: light-color($color, $amount)!important;}
+  .text-#{$name}, .text-#{$name} *{color: light-color($color, $amount);}
+  .hover-text-#{$name}:hover{color: light-color($color, $amount);}
+  .border-#{$name} {border-color: light-color($color, $amount)!important;}
+ 
+}
+@mixin generate-dark($color, $name, $amount) {
+  .bg-#{$name} {background-color: dark-color($color, $amount)!important;}
+  .hover-bg-#{$name}:hover{ background-color: dark-color($color, $amount)!important;}
+  .text-#{$name}, .text-#{$name} * {color: dark-color($color, $amount);}
+  .border-#{$name} {border-color: dark-color($color, $amount)!important;}
+}
+
+@mixin generate-alpha($color, $name, $alpha) {
+  $alpha_lookup: (1:1A,2:33,3:4D,4:66,5:80,6:99,7:B3,8:CC,9:E6);
+  $alpha_hex: map-get($alpha_lookup,$alpha);
+  $rgba_color: #{$color}+$alpha_hex;
+  .bg-alpha-#{$name} {background-color:$rgba_color!important;}
+}
+/* -------- */
+@for $i from 1 through 9 {  
+  @include generate-light($black, gray-#{$i}, calc(10 * (10 - $i))); 
+  @include generate-alpha($black, gray-#{$i}, $i);  
+}
+
+@for $i from 1 through 9 {
+  @include generate-light($white, white-#{$i}, calc(10 * (10 - $i)));
+  @include generate-alpha($white, white-#{$i}, $i);
+}

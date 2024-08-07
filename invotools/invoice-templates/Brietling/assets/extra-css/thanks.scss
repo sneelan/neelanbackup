@@ -1,0 +1,95 @@
+//Theme Changing
+@import "../extra-css/aa_date";
+@import "../extra-css/install_mixin";
+@import "../extra-css/_aroot_colors_yellow";
+@import "../extra-css/_aroot_variables";
+
+@import "../extra-css/install_grid";
+@import "../extra-css/install_reset";
+@import "../extra-css/install_typography";
+
+
+@import "../extra-css/layout"; 
+@import "../extra-css/layout_header"; 
+@import "../extra-css/layout_footer"; 
+@import "../extra-css/layout_nav"; 
+ 
+@import "../extra-css/section_common"; 
+@import "../extra-css/section_invoice";
+@import "../extra-css/section_invoice_print";
+@import "../extra-css/section_socialicons";
+//@import "../extra-css/section_invoice_exception";
+@import "../extra-css/section_invoice_dark_version1";
+@import "../extra-css/section_z_warhammer"; 
+
+
+
+@include media-breakpoint-max(1024px) {
+    .container-xl.rounded{border-radius: unset!important;}
+}
+header{
+    background: url('assets/images/season/header-thanks.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    
+    @include media-breakpoint-max(768px) {
+        background-size: cover;
+    }
+    @include media-breakpoint-min(769px) {
+        background-size: contain;
+    }
+    @include media-breakpoint-min(1024px) {
+        //min-height: 138px;
+        background-size: cover;
+    }
+    @include media-breakpoint-max(578px) {
+        background-size: unset;
+        background-position: top left;
+    }
+    /* padding:1em 0 ; */    
+
+    .bg-theme-accent{
+        background-color:#b82207;color:white;       
+    }
+    .logo{
+        opacity: 0; height: 138px;
+        @include media-breakpoint-max(578px) {
+            height: 120px;
+            margin-bottom:5px!important;
+        }
+        
+    }
+ 
+}
+.header-outer.bg-theme-accent{
+    //background-color:#003255;color:white; 
+    margin-top: 0!important;      
+}
+.border-theme-accent{border-color:#b82207!important;}
+html{
+    //background: url('assets/images/season/bg-vertical-thanks.png');
+/*     background-position:top left;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-attachment: fixed; */
+}
+body{
+    background-color: transparent!important;
+   //background-color:#005e81 !important;
+    /* background: url('assets/images/season/bg-vertical-thanks.png');
+    background-position:bottom left;
+    background-repeat: repeat-x;
+    background-attachment: fixed;  
+    background-size: contain;   */
+}
+body.py-xl-2{padding-top:0!important ;}
+
+.dark-mode{
+    background-color: transparent!important;
+    //background: url('assets/images/season/bg-vertical-thanks-dark.png'); background-position:bottom left;background-attachment: fixed; 
+    //background-color:#011320 !important;
+    .container-xl{
+        border: 1px solid rgba(0, 0, 0, 0.2)!important;  
+        background-color:transparent !important;
+    }
+}

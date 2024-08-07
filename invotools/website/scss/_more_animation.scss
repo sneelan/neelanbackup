@@ -1,0 +1,94 @@
+.fadeout{animation: fadeOut 1s 1 linear forwards;}
+//@keyframes fadeLoop {0% {opacity: 0;}5% {opacity: 1;}75% {opacity: 1;}80% {opacity: 0;}100% {opacity: 0;}  } 
+@keyframes fadeOut {0% {opacity: 1;}100% {opacity: 0;}  } 
+@keyframes fadeIn {0% {opacity: 0;}100% {opacity: 1;}  } 
+
+
+@keyframes rotateRight {
+    from{transform: rotate(0deg);}to{transform: rotate(360deg);}
+}
+@keyframes rotateLeft {
+    from{transform: rotate(0deg);}to{transform: rotate(-360deg);}
+}
+
+.animate-bottom {
+    position: relative;
+    animation: animatebottom 0.4s;
+}
+@keyframes animatebottom {
+    from {bottom: -300px;opacity: 0;}
+    to {bottom: 0;opacity: 1;}
+}
+
+@keyframes bg-scroll {
+    0%{background-position: center;}
+    25% {background-position: center bottom;}
+    75% {background-position: center top;}
+    100% {background-position: center;}
+}
+@keyframes bg-scroll-flim{
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center calc(100% - 100vh + 67px);
+    }
+}
+@keyframes bg-rotate {0%, 100% {background-position: 0% 0%;}50% {background-position: 100% 100%;}}
+
+@keyframes bg-scroll-horizontal {
+    0%{background-position: left;}    
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
+
+
+#ripple {
+    position: relative;
+    width: 200px; /* Adjust according to your container size */
+    height: 200px; /* Adjust according to your container size */
+    overflow: hidden;    
+    top: 143px;
+    left: -79px;
+  }
+  .ripple-animate{
+    .ripple-circle {
+        position: absolute;
+        border: 5px solid rgba(243, 191, 255, 0.5); /* Adjust color and opacity as needed */
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        animation: ripple-animation 3s ease forwards; /* Adjust animation duration as needed */
+    }
+
+    @keyframes ripple-animation {
+        0% {
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        }
+        100% {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        }
+    }
+
+    .ripple-circle:nth-child(1) {
+        animation-delay: 0s; /* Delay for the first ripple */
+    }
+
+    .ripple-circle:nth-child(2) {
+        animation-delay: 1s; /* Delay for the second ripple */
+    }
+
+    .ripple-circle:nth-child(3) {
+        animation-delay: 2s; /* Delay for the third ripple */
+    }
+}

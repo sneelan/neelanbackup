@@ -1,0 +1,1 @@
+1. In this Html Template, When product image is empty developer should add a dynamic class name "ps-3" for the product title td.

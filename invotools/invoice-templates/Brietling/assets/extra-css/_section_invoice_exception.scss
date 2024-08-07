@@ -1,0 +1,25 @@
+/*.theme-accent-dark---with body*/
+body{
+    .bg-theme-accent {color: white;}
+    .hover-bg-accent:hover{background-color: $theme-accent-verylight;}  
+}
+.my-row-2{
+    background-color: $theme-primary-light; 
+}
+.product{
+    table tr th{background-color: $theme-accent;color:white;}
+}
+footer{
+    .footer-left{svg{fill:$theme-accent-light;}}
+    .footer-right { 
+        background-color: $theme-primary!important; 
+        h4{color: white;}
+        a{
+            color:$theme-primary-light!important; 
+                svg{fill:$theme-primary-light;}
+                &:hover{color:$theme-secondary!important; 
+                    //svg{fill:initial!important;}
+                }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.perspective {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #141414;
+}
+.perspective .wrap {
+    position: relative;
+    perspective: 100px;
+    text-transform: uppercase;
+}
+.perspective .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #191919;
+    font-size: 10vw;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 rgba(240, 240, 240, 1), 1px -1px 0 rgba(240, 240, 240, 1), -1px 1px 0 rgba(240, 240, 240, 1), 1px 1px 0 rgba(240, 240, 240, 1);
+    transform-style: preserve-3d;
+}
+.perspective .text:first-child {
+    position: relative;
+}

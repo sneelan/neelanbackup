@@ -1,0 +1,43 @@
+html, body, p, ul{
+  margin: 0;padding: 0;
+}
+.container-xl{background-color:white;}
+body {
+  line-height: 1;
+  background-color: $page-bg!important;
+}
+//*{transition: 0.25s;}
+section{
+  padding:0 0 1rem 0;
+  @include media-breakpoint-max(768px){padding:0 0 1.5rem 0;}
+}
+ol, ul {
+  list-style: none; 
+}
+blockquote, q {
+  quotes: none; 
+}
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+a{
+  text-decoration:none;
+  //transition: 0.5s; 
+  color:$theme-secondary;  
+  &:hover{color: black;}
+} 
+.container-xl{ padding: 0;  
+  @include media-breakpoint-max(1200px){
+    padding:1em;
+  }
+}
+.row{margin: 0;padding: 0;}

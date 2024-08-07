@@ -1,0 +1,60 @@
+@mixin generate-variants($color,$name) {
+    .bg-#{$name} {background-color:$color!important;}
+    .text-#{$name} , .text-#{$name} p{color:$color!important;}    
+    .border-#{$name}{ border-color: $color!important;}
+    .hover-border-#{$name}:hover, .hover:hover .hover-border-#{$name}{ border-color: $color!important;}
+    .hover-bg-#{$name}:hover, .hover:hover .hover-bg-#{$name}{ background-color: $color!important;}
+    .hover-text-#{$name}:hover, .hover:hover .hover-text-#{$name}{color:$color!important;}   
+    .svg-#{$name}{ fill: $color!important;@include transition(.25);}
+    .hover-svg-#{$name}:hover{ fill: $color!important;}
+    .btn-#{$name}{background-color:$color!important;}
+    .link-#{$name}, .link-#{$name} a{color:$color!important; text-decoration: none;}
+    .hover-link-#{$name}:hover, .link-#{$name} a:hover, .hover:hover .hover-link-#{$name}{color:$color!important;}
+}
+@include generate-variants($black, 'black');
+@include generate-variants($white, 'white');
+@include generate-variants($primary, primary);
+@include generate-variants($primary-light, primary-light);
+@include generate-variants($primary-verylight, primary-verylight);
+@include generate-variants($primary-dark, primary-dark);
+
+@include generate-variants($secondary, secondary);
+@include generate-variants($secondary-light, secondary-light);
+@include generate-variants($secondary-verylight, secondary-verylight);
+@include generate-variants($secondary-dark, secondary-dark);
+
+@include generate-variants($accent, accent);
+@include generate-variants($accent-light, accent-light);
+@include generate-variants($accent-verylight, accent-verylight);
+@include generate-variants($accent-dark, accent-dark);
+
+/* @include generate-variants($base, base);
+@include generate-variants($base-light, base-light);
+@include generate-variants($base-verylight, base-verylight);
+@include generate-variants($base-dark, base-dark); */
+
+/* @include generate-variants($blaze, blaze);
+@include generate-variants($blaze-light, blaze-light);
+@include generate-variants($blaze-verylight, blaze-verylight);
+@include generate-variants($blaze-dark, blaze-dark); */
+
+
+
+.bg-gradient-primary{
+    background:linear-gradient( to bottom, $primary, $primary-dark);
+}
+.bg-gradient-primary-light{
+    background:linear-gradient( to bottom, $primary-light, $primary-verylight);
+}
+.bg-gradient-secondary{
+    background:linear-gradient( to bottom, $secondary, $secondary-dark);
+}
+.bg-gradient-secondary-light{
+    background:linear-gradient( to bottom, $secondary-light, $secondary-verylight);
+}
+.bg-gradient-accent{
+    background:linear-gradient( to bottom, $accent, $accent-dark);
+}
+.bg-gradient-accent-light{
+    background:linear-gradient( to bottom, $accent-light, $accent-verylight);
+}

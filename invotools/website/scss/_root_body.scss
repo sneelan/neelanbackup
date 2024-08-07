@@ -1,0 +1,30 @@
+html {
+  //scroll-behavior: smooth;
+}
+body{
+  //background-color:$primary-dark;
+  //cursor: url("images/cursor.svg"), auto; //custom cursor
+}
+//*{@include transition(.25);}
+::-moz-selection { 
+  color:$accent-verylight!important;
+  background: $accent;
+}  
+::selection {
+  color:$accent-verylight!important;
+  background: $accent;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  height: 8px;               
+  width: 8px;   
+  //border: 1px solid black;
+  background-color:$secondary;
+}
+::-webkit-scrollbar-thumb:vertical{
+        background:$secondary-light;;
+        //background:$primary;
+        border-radius: 2px;
+    }
+/* scrollbar */

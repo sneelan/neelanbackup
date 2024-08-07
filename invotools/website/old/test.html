@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Image Carousel</title>
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img src="images/home/hero1.jpg" alt="Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/home/hero2.jpg" alt="Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/home/hero3.jpg" alt="Image 3">
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  var currentIndex = 0;
+  var items = $('.carousel-item');
+  var totalItems = items.length;
+
+  function nextSlide() {
+    var nextIndex = (currentIndex + 1) % totalItems;
+    $('.carousel-inner').css('transform', 'translateX(-' + (nextIndex * 100) + '%)');
+    currentIndex = nextIndex;
+  }
+
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
+</script>
+
+</body>
+</html>

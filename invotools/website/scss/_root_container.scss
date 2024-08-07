@@ -1,0 +1,17 @@
+
+.container-xl{
+    max-width:1600px; margin: auto;     
+    @include media-breakpoint-min(1401px){padding: 0 6em;}
+    @include media-breakpoint-max(1400px){padding: 0 5em;}
+    @include media-breakpoint-max(1280px){padding: 0 4em;}
+    @include media-breakpoint-max(1200px){padding: 0 3em;}
+    @include media-breakpoint-max(1100px){padding: 0 2em;}
+    @include media-breakpoint-max(992px){padding: 0 1em;}
+    @include media-breakpoint-max(568px){padding: 0 0.6em;}
+}
+.container,.lg-container .container{
+    @include media-breakpoint-min(1401px){padding: 0 3em; max-width: 1600px;}
+    @include media-breakpoint-max(1400px){padding: 0 2em;max-width: unset;}        
+    @include media-breakpoint-max(992px){padding: 0 1em;max-width: unset;}
+    @include media-breakpoint-max(568px){padding: 0 0.6em;}
+}

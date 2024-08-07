@@ -1,0 +1,29 @@
+//My Theme Colors
+$page-bg:#dadada;
+$theme-primary-verylight:  #FFF0D6;
+$theme-primary-light:  #FFC25A;
+$theme-primary:  #ffc62d;
+
+$theme-secondary:  #111820; 
+$theme-secondary-light:  #A7A6A6; 
+$theme-secondary-verylight:  #E9E9E9; 
+
+$theme-accent:#ffc62d;
+$theme-accent-light:#ffdf78;
+$theme-accent-verylight:#feefc6;
+
+$dark-page-bg:#241d11;
+$theme-heading:#643f00 ;
+
+.dark-mode{
+    .bg-theme-accent{
+        background-color: #1d1d1d!important;
+        color:white!important;
+    }
+    .border-theme-accent{
+        border-color:#1d1d1d!important;;
+    }
+    .product-total{
+        tr:last-child td{background-color:#1d1d1d!important; }
+    }
+}

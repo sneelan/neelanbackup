@@ -1,0 +1,112 @@
+$breakpoints: (
+  'default': 16px,
+  '1400px': 15px,
+  '992px': 14px,
+  '768px': 13px,
+  '576px': 12px
+);
+
+@mixin set-root-font-size() {
+  @each $breakpoint, $font-size in $breakpoints {
+    @if $breakpoint == 'default' {
+      html {
+        font-size: $font-size;
+      }
+    } @else {
+      @media (max-width: #{unquote($breakpoint)}) {
+        html {
+          font-size: $font-size;
+        }
+      }
+    }
+  }
+}
+@include set-root-font-size();
+@mixin responsive-font-size($selector, $size) {
+  #{$selector} {
+    font-size: $size;
+  }
+}
+
+// neelan: finalize the size for the large device above 1401
+$headings: (
+  'h1, .h1': 5.5rem,
+  'h2, .h2': 4.5rem,
+  'h3, .h3': 4rem,
+  'h4, .h4': 3rem,
+  'h5, .h5': 2rem,
+  'h6, .h6': 1.5rem
+);
+@each $heading, $size in $headings {
+  @include responsive-font-size($heading, $size);
+}
+
+
+$size-xxl: 1.6667rem; // 20px
+$size-xl: 1.5rem;     // 18px
+$size-lg: 1.3333rem;  // 16px
+$size-md: 1.1667rem;  // 14px
+$size-sm: 1rem;       // 12px
+
+body{
+  font-size:$size-md;
+}
+
+$font-primary: 'ItalianPlateNo2', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$font-standary: sans-serif;
+@font-face {
+    font-family: 'ItalianPlateNo2';
+    src: url("assets/fonts/ItalianPlateNo2-Regular.woff2") format("woff2"), 
+         url("assets/fonts/ItalianPlateNo2-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ItalianPlateNo2';
+    src: url("assets/fonts/ItalianPlateNo2-Extralight.woff2") format("woff2"), 
+         url("assets/fonts/ItalianPlateNo2-Extralight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ItalianPlateNo2';
+    src: url("assets/fonts/ItalianPlateNo2-Demibold.woff2") format("woff2"), 
+         url("assets/fonts/ItalianPlateNo2-Demibold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("assets/fonts/OpenSans-Regular.woff2") format("woff2"), 
+         url("assets/fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("assets/fonts/OpenSans-Bold.woff2") format("woff2"), 
+         url("assets/fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family:$font-primary;
+    color: $theme-secondary !important;
+    line-height:145%;    
+}
+.font-primary{font-family:$font-primary;}
+.font-secondary{font-family:$font-secondary;}
+.para, p{    
+    color:$theme-secondary;
+}

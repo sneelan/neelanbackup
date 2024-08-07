@@ -1,0 +1,20 @@
+
+
+//by Mixin
+.opacity-75{@include opacity(0.75);}
+.opacity-50{@include opacity(0.5);}
+.opacity-25{ @include opacity(0.25);}
+.opacity-hover-100{@include opacity-hover(1);}
+.opacity-hover-75{@include opacity-hover(0.75);}
+.opacity-hover-50{@include opacity-hover(0.5);}
+.opacity-hover-25{ @include opacity-hover(0.25);} 
+
+.shadowX{
+    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.16)!important;
+    -webkit-box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.16)!important;
+    -moz-box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.16)!important;
+}
+.hover-underline:hover{text-decoration: underline!important;color: black;}
+.flex-center{ display: flex; align-items: center; justify-content: center;}
+.flex-between{ display: flex; align-items: center; justify-content: space-between;}
+

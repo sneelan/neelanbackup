@@ -1,0 +1,54 @@
+@mixin generate-variants($color,$name) {
+    .bg-#{$name} {background-color:$color!important;}
+    .text-#{$name} , .text-#{$name} p{color:$color!important;}    
+    .border-#{$name}{ border-color: $color!important;}
+    .hover-border-#{$name}:hover, .hover:hover .hover-border-#{$name}{ border-color: $color!important;}
+    .hover-bg-#{$name}:hover, .hover:hover .hover-bg-#{$name}{ background-color: $color!important;}
+    .hover-text-#{$name}:hover, .hover:hover .hover-text-#{$name}{color:$color!important;}   
+    .svg-#{$name}{ fill: $color!important;@include transition(.25);}
+    .hover-svg-#{$name}:hover{ fill: $color!important;}
+    .btn-#{$name}{background-color:$color!important;}
+    .link-#{$name}, .link-#{$name} a{color:$color!important; text-decoration: none;}
+    .hover-link-#{$name}:hover, .link-#{$name} a:hover, .hover:hover .hover-link-#{$name}{color:$color!important;}
+}
+$black:#000000;
+$white:#FFFFFF;
+@include generate-variants($black, 'black');
+@include generate-variants($white, 'white');
+@include generate-variants($theme-primary, theme-primary);
+@include generate-variants($theme-primary-light, theme-primary-light);
+@include generate-variants($theme-primary-verylight, theme-primary-verylight);
+@include generate-variants($theme-secondary, theme-secondary);
+@include generate-variants($theme-secondary-light, theme-secondary-light);
+@include generate-variants($theme-secondary-verylight, theme-secondary-verylight);
+@include generate-variants($theme-accent, theme-accent);
+@include generate-variants($theme-accent-light, theme-accent-light);
+@include generate-variants($theme-accent-verylight, theme-accent-verylight);
+
+.hover-underline:hover{text-decoration: underline;color: black;}
+
+.hover:hover .img-hover-zoom{@include zoom(1.1); @include transition(1.5);}
+.hover .img-hover-zoom{@include zoom(1);@include transition(1.5);}
+
+.border-red{border-color:$theme-secondary!important;border-width:2px!important;} 
+
+.primary-svg svg{fill:$theme-primary;}
+.secondary-svg svg{fill:$theme-secondary;}
+.accent-svg svg{fill:$theme-accent;} 
+
+@function light-color($color, $amount) {@return mix($white, $color, $amount * 1%);}
+@mixin generate-light($color, $name, $amount) {
+    .bg-#{$name} {background-color: light-color($color, $amount)!important;}
+    .hover-bg-#{$name}:hover{ background-color: light-color($color, $amount)!important;}
+    .text-#{$name}, .text-#{$name} *{color: light-color($color, $amount);}
+    .hover-text-#{$name}:hover{color: light-color($color, $amount);}
+    .border-#{$name} {border-color: light-color($color, $amount)!important;}   
+  }
+
+@for $i from 1 through 9 {  
+    @include generate-light($black, gray-#{$i}, calc(10 * (10 - $i))); 
+  }
+  
+  @for $i from 1 through 9 {
+    @include generate-light($white, white-#{$i}, calc(10 * (10 - $i)));
+  }

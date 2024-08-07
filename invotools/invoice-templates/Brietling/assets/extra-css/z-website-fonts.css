@@ -1,0 +1,79 @@
+/* body they used - ItalianPlateNo2 Regular
+for button - they used - Open Sans
+
+*/
+
+
+@font-face {
+    font-family: "icons";
+    src: url("/assets/fonts/icons/asset-version-97e3096d05/icons-2018.eot");
+    src: url("/assets/fonts/icons/asset-version-97e3096d05/icons-2018.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/icons/asset-version-8f0426bb5f/icons-2018.woff2") format("woff2"), url("/assets/fonts/icons/asset-version-9c65f5dab0/icons-2018.woff") format("woff"), url("/assets/fonts/icons/asset-version-036e0d02a7/icons-2018.ttf") format("truetype"), url("/assets/fonts/icons/asset-version-1459c358f1/icons-2018.svg#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "icons";
+        src: url("/assets/fonts/icons/asset-version-1459c358f1/icons-2018.svg#icons") format("svg")
+    }
+}
+
+@font-face {
+    font-family: "font";
+    src: url("/assets/fonts/italianplate/asset-version-205433b30c/ItalianPlateNo2-Regular.woff2") format("woff2"), url("/assets/fonts/italianplate/asset-version-9f97965cb2/ItalianPlateNo2-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "font";
+    src: url("/assets/fonts/italianplate/asset-version-5f56219632/ItalianPlateNo2-Extralight.woff2") format("woff2"), url("/assets/fonts/italianplate/asset-version-5617048da0/ItalianPlateNo2-Extralight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "font";
+    src: url("/assets/fonts/italianplate/asset-version-0895eb505d/ItalianPlateNo2-Demibold.woff2") format("woff2"), url("/assets/fonts/italianplate/asset-version-675ca4850a/ItalianPlateNo2-Demibold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/assets/fonts/opensans/asset-version-5d5735e571/OpenSans-Regular.woff2") format('woff2'), url("/assets/fonts/opensans/asset-version-6fde2eb672/OpenSans-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/assets/fonts/opensans/asset-version-93fe8f3415/OpenSans-Bold.woff2") format('woff2'), url("/assets/fonts/opensans/asset-version-759ea19bcc/OpenSans-Bold.woff") format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Vanessa';
+    src: url("/assets/fonts/asset-version-ef7fca9a30/Vanessa.otf")
+}
+
+@font-face {
+    font-family: 'Univercom';
+    src: url("/assets/fonts/asset-version-04d18c6aa7/UNIVERCDM.ttf")
+}
+
+@font-face {
+    font-family: 'Breitling Fond';
+    src: url("/assets/fonts/breitling/asset-version-d3d11f59b9/breitling_fond-webfont.woff2") format("woff2"), url("/assets/fonts/breitling/asset-version-a2a1632f1c/breitling_fond-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}

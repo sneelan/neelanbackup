@@ -1,0 +1,36 @@
+
+.btn{   
+    padding: 0.7em 1em; 
+    @include transition(0.5);    
+    border: unset;
+    border-radius: 5px;
+    white-space: nowrap;
+    @include media-breakpoint-max(992px){
+        padding: 0.5em 1.25em;
+        @include transition(0.5); 
+    }
+}
+.btn-sm{ padding:4px 16px;}
+.btn-outline{border: 2px solid white;}
+
+.btn-primary {
+    color:$black;        
+    @extend .hover-bg-primary-light;
+    @extend .hover-text-black;
+}
+.btn-secondary {
+    color:$secondary; 
+    @extend .text-white;    
+    @extend .bg-secondary-dark;      
+    @extend .hover-bg-secondary;
+    &:hover{ color:white!important;}
+}
+.btn-accent {
+   
+    color:$black;
+    @extend .hover-bg-accent-light;
+    @extend .hover-text-black;
+}
+section{
+    padding:5em 0;
+}

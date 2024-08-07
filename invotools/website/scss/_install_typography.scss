@@ -1,0 +1,104 @@
+$h1 : 3.625rem; //58px    1rem=16px //
+$h2 : 2.375rem; //38px//
+$h3 : 2rem; //28px//
+$h4 : 1.5rem; //24px
+$h5 : 1.3rem; //
+$h6 : 1.2rem; //
+$para-title: 1.1rem; //16px
+$para: 1rem; //16px
+$small: 0.875rem; // 14px
+$xsmall: 0.75rem; //12px//
+$table-font:0.95rem; // 15px
+$form-input:0.95rem; // 15px
+
+$size-xs:0.8rem;
+$size-sm:0.9rem;
+$size-md:1rem;
+$size-lg:1.2rem;
+$size-xl:1.3rem;
+$size-xxl:1.4rem;
+.size-xxl, .size-xxl *{ font-size: $size-xxl;}
+.size-xl, .size-xl *{ font-size: $size-xl;}
+.size-lg, .size-lg *{ font-size: $size-lg;} 
+.size-md, .size-md *{ font-size: $size-md;} 
+.size-sm, .size-sm *{ font-size: $size-sm;}
+.size-xs, .size-xs *{ font-size: $size-xs;} 
+.size-xl-xs, .size-xl-xs *{ @include  media-breakpoint-min(1200px){font-size: $size-xs;}}
+.size-xxl-md, .size-xxl-md *{ @include  media-breakpoint-min(1400px){font-size: $size-md;}}
+
+@font-face {font-family: 'Matter-normal'; src: url('fonts/MatterTRIAL-Regular.otf') format('opentype'); font-weight: normal;}
+@font-face {font-family: 'Matter-light'; src: url('fonts/MatterTRIAL-Light.otf') format('opentype'); font-weight: lighter;}
+@font-face {font-family: 'Matter-medium'; src: url('fonts/MatterTRIAL-Medium.otf') format('opentype'); font-weight: medium;}
+@font-face {font-family: 'Matter-semibold'; src: url('fonts/MatterTRIAL-SemiBold.otf') format('opentype'); font-weight:600;}
+@font-face {font-family: 'Matter-bold'; src: url('fonts/MatterTRIAL-Bold.otf') format('opentype'); font-weight: bold;}
+@font-face {font-family: 'Matter-heavy'; src: url('fonts/MatterTRIAL-Heavy.otf') format('opentype'); font-weight: bolder;}
+
+$font-normal:'Matter-normal', sans-serif;
+$font-light: 'Matter-light', sans-serif;
+$font-medium: 'Matter-medium', sans-serif;
+$font-semibold: 'Matter-semibold', sans-serif;
+$font-bold: 'Matter-bold', sans-serif;
+$font-heavy: 'Matter-heavy', sans-serif;
+
+.font-normal{font-family:$font-normal;}
+.font-light{font-family:$font-light;}
+.font-medium{font-family:$font-medium;}
+.font-semibold{font-family:$font-semibold;}
+.font-bold{font-family:$font-bold;}
+.font-heavy{font-family:$font-heavy;}
+
+$font-primary: 'Matter-light', sans-serif;
+$font-secondary : Tahoma, sans-serif !default;
+.font-primary{font-family:$font-primary!important;}
+.font-secondary{font-family:$font-secondary;}
+
+*{line-height:145%;}
+body {
+    font-family:$font-light;
+    color: $secondary!important; 
+}
+h1, .h1, h2, .h2, h3, .h3,h4,.h4,h5,.h5,h6,.h6{font-family:$font-normal;}
+.h1, h1{   
+    font-weight: normal;
+    font-size:$h1; 
+    @include  media-breakpoint-max(1280px){font-size: $h2; }
+    @include  media-breakpoint-max(768px){font-size:1.5rem; } 
+    margin-bottom:0.2em;
+}
+.h2, h2{
+    font-weight: normal;
+    font-size:$h2; 
+    @include  media-breakpoint-max(1280px){font-size:1.75rem;}
+    @include  media-breakpoint-max(576px){font-size:1.5rem;}
+}
+.h3, h3{
+    font-weight: normal;
+    font-size:2rem;
+    @include  media-breakpoint-max(768px){font-size:1.75rem;}
+    @include  media-breakpoint-max(576px){font-size:1.5rem;}
+    @include  media-breakpoint-max(375px){font-size:1.3rem;}
+    line-height:145%;
+}
+.h4,h4{
+    font-weight: normal;
+    font-size:$h4;      
+    @include  media-breakpoint-max(768px){font-size:$h5;}
+    @include  media-breakpoint-max(576px){font-size:$h6;}
+    line-height:145%;
+}
+.h5,h5,.h6,h6{
+    font-weight: normal;
+    font-size:$h5; 
+    @include  media-breakpoint-max(1280px){font-size:1.1rem; }
+}
+.para, p{
+    font-size:$para; color:$secondary;
+    @include  media-breakpoint-max(1270px){font-size:$small;}
+}
+.para-title{
+    font-family:$font-medium;
+    font-size:$para-title; 
+    color:$secondary;     
+    margin-bottom:0.5em;
+    @include  media-breakpoint-min(1300px){font-size:1.5rem; line-height: 120%;}
+}

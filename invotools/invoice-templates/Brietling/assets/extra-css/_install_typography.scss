@@ -1,0 +1,83 @@
+$size-xxl:20px;
+$size-xl:18px;
+$size-lg:16px;
+$size-md:14px;
+$size-sm:12px;
+
+@include media-breakpoint-max(1199px) {
+  .size-xxl{font-size:$size-xxl;}
+  .size-xl{font-size:$size-xl;}
+  .size-lg{font-size:$size-lg;}
+  .size-md{font-size:$size-md;}
+  .size-sm{font-size:$size-sm;}
+}
+@include media-breakpoint-min(1200px) {
+  .size-xxl{font-size:22px ;}
+  .size-xl{font-size:20px ;}
+  .size-lg{font-size:18px ;}
+  .size-md{font-size:16px ;} 
+  .size-sm{font-size:14px ;}
+}
+body{
+  font-size:14px;
+  @include media-breakpoint-min(1200px) {font-size:16px;}
+}
+
+$font-primary: 'ItalianPlateNo2', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$font-standary: sans-serif;
+@font-face {
+    font-family: 'ItalianPlateNo2';
+    src: url("assets/fonts/ItalianPlateNo2-Regular.woff2") format("woff2"), 
+         url("assets/fonts/ItalianPlateNo2-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ItalianPlateNo2';
+    src: url("assets/fonts/ItalianPlateNo2-Extralight.woff2") format("woff2"), 
+         url("assets/fonts/ItalianPlateNo2-Extralight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ItalianPlateNo2';
+    src: url("assets/fonts/ItalianPlateNo2-Demibold.woff2") format("woff2"), 
+         url("assets/fonts/ItalianPlateNo2-Demibold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("assets/fonts/OpenSans-Regular.woff2") format("woff2"), 
+         url("assets/fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("assets/fonts/OpenSans-Bold.woff2") format("woff2"), 
+         url("assets/fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family:$font-primary;
+    color: $theme-secondary !important;
+    line-height:145%;    
+}
+.font-primary{font-family:$font-primary;}
+.font-secondary{font-family:$font-secondary;}
+.para, p{    
+    color:$theme-secondary;
+}

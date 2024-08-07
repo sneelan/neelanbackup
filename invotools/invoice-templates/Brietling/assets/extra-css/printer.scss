@@ -1,0 +1,71 @@
+//Theme Changing
+@import "../extra-css/aa_date";
+@import "../extra-css/install_mixin";
+@import "../extra-css/_aroot_colors_gray";
+@import "../extra-css/_aroot_variables";
+
+@import "../extra-css/install_grid";
+@import "../extra-css/install_reset";
+@import "../extra-css/install_typography";
+
+
+@import "../extra-css/layout"; 
+@import "../extra-css/layout_header"; 
+@import "../extra-css/layout_footer"; 
+@import "../extra-css/layout_nav"; 
+
+@import "../extra-css/section_common"; 
+@import "../extra-css/section_invoice";
+@import "../extra-css/section_invoice_print";
+@import "../extra-css/section_socialicons";
+@import "../extra-css/section_invoice_exception";
+@import "../extra-css/section_invoice_dark_version4"; 
+@import "../extra-css/section_z_warhammer";
+
+body:not(body.dark-mode){
+    *{ 
+       // background-color:white!important; 
+        color:black!important;
+        filter: grayscale(1)!important; 
+        border-color:#afafaf!important; 
+        border-width:1px !important;
+        font-family:sans-serif  !important;
+        border-radius: unset!important;        
+    }
+    .shadow{box-shadow:unset!important;-webkit-box-shadow:unset!important;-moz-box-shadow:unset!important;}
+    .mob-pro-right table{tr, tbody, td{border: unset!important;}}
+    .opacity-75{opacity: 1!important;}
+    .footer-right {display:none;}
+    .footer-left{
+        width: 100%; text-align: center;
+        div{ width: 100%; 
+            a{display:inline-block; margin-right: 2em; svg{display: none;}} 
+        }
+    }    
+    header .title{border: 1px solid #afafaf; border-bottom: none;}
+    .product{ 
+        tr td:first-child, tr th:first-child{display: none;}
+        td{padding: 0.5em;}   
+        th{background-color: white!important;}    
+    }
+    .product-total {
+        tbody, tr:first-child td{border-top:unset!important;}
+        .bg-theme-accent td{background-color: white!important; color: black!important;}
+        tr td:first-child{border-right: unset!important;}
+        tr td:nth-child(2){border-left: unset!important;}
+    }
+    .sec-sign-left .ps-lg-3{padding-left: unset!important;}
+    svg{fill:black!important;}
+   .track-ship{ svg, td:nth-child(3) img{display: none;}}
+   .qrcode {border: unset!important;}
+    
+}
+.body.dark-mode *{ background-color:white!important; 
+    color:black!important;
+    filter: grayscale(1)!important; 
+    border-color:#afafaf!important; 
+    border-width:1px !important;
+    font-family:sans-serif  !important;
+    border-radius: unset!important; }
+*, .bg-black{background-color: white!important; color:black!important;}
+body, #root, html{background-color:transparent!important;}

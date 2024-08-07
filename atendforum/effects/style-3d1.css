@@ -1,0 +1,29 @@
+.effect {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.wrap {
+  position: relative;
+  perspective: 100px;
+  text-transform: uppercase;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #191919;
+  font-size: 7vw;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #f0f0f0, 1px -1px 0 #f0f0f0, -1px 1px 0 #f0f0f0, 1px 1px 0 #f0f0f0;
+  transform-style: preserve-3d;
+  opacity: .8;
+}
+.text:first-child {
+  position: relative;
+}

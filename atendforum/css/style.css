@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap'); */
+
+*{
+    font-family: 'Nunito Sans', sans-serif; font-weight: 300;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mybg{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    position: fixed;
+}
+
+.border{border-color: #bb00ff49!important;}
+::-webkit-scrollbar {
+  height: 5px;               
+  width: 5px;   
+ 
+}
+::-webkit-scrollbar-thumb:horizontal{
+ 
+        border-radius: 10px;
+    }
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.hero-inner {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, auto, auto, 0);
+}
+
+.myimg {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.hero:nth-child(1) .myimg {
+    background-image: url(../images/bg.jpg);
+}
+.hero__title {
+    font-size: 6rem;
+}
+.hero__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.jquery-image .img-anchor {max-height: 500px;overflow: hidden;display: block;
+  box-shadow: 0 0.1px 10px #78008a;
+  border: 2px solid #020981;
+  position: relative;
+  height: 500px;
+  width: 430px;
+  background-size: 100%;
+  background-position: 0 0%;
+  top:0%; left:0;
+  transition: all ease-in-out 2s;
+  background-repeat: no-repeat;
+  
+}
+.jquery-image .img-anchor:hover { 
+background-position: 0 100%;
+border: 2px solid #bb00ff!important;
+bottom:0;
+left: 0;
+}
+.speed8 a, .speed8 a:hover{  transition:8s;}
+.hover-image a{display: block;width: 100%;height: 100%;background-size: contain;}
+.hover-image a img{ opacity: 0;transition: .5s;}
+.hover-image a:hover img{ opacity:1; transition: .5s;}
+.mytitle{ transition: .25s; }
+.over:hover .mytitle{ font-weight: bold!important; transition: .25s; }
+
+.mysmall {font-size: 14px; text-transform: lowercase; color:rgb(0, 0, 61); line-height: 100%; text-decoration: none;}
+
+.nav-pills .nav-link{color:black; padding: .75em 1.5em;}
+.nav-pills .nav-link.active{background-color:black; font-weight: bold;}
+
+
+
+
+/* animation */
+
+.waviy-wrap {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    animation-iteration-count:none;
+
+  }
+  .waviy {    position: relative;  }
+  .waviy-wrap:hover  .waviy span{ animation-play-state: running; animation-iteration-count: infinite;}
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    color: #000000;
+    text-transform: uppercase; font-weight: 500;
+    animation: flip 2s;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+  td{border-color: red;}
+
+
+
+  @media only screen and (max-width:430px) {
+    .jquery-image .img-anchor {width: 100%;}
+    .hero {width: 100%;height:auto;}
+  
+  }
+  
+  @media only screen and (max-width:978px) {
+    .hero, .hero-inner{width: 100%; height:auto; overflow: visible;clip: unset;}
+    .waviy, .hero__title, .hero, .hero-inner{position: unset;}
+    .waviy-wrap{height: auto;}
+    .waviy{background-color: white; width: 100%; text-align: center;}
+    .myimg{    background-size: cover;    position:unset;}
+    .waviy span {font-size:3em;}
+  }

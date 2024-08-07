@@ -1,0 +1,70 @@
+/*.theme-accent-dark---with body*/
+body{
+    .bg-theme-accent {color: white;}
+    .hover-bg-accent:hover{background-color: $theme-accent-verylight;}  
+}
+.my-row-2{
+    background-color: $theme-primary-light; 
+}
+.product{
+    table tr th{background-color: $theme-accent;color:white;}
+}
+footer{
+    .footer-left{svg{fill:$theme-accent-light;}}
+    .footer-right { 
+        background-color: $theme-primary!important; 
+        h4{color: white;}
+        a{
+            color:$theme-primary-light!important; 
+                svg{fill:$theme-primary-light;}
+                &:hover{color:$theme-secondary!important; 
+                    //svg{fill:initial!important;}
+                }
+        }
+    }
+}
+
+
+
+/* Dark mode */
+.XXXdark-modex{   
+    background-color:$dark-page-bg!important;  
+    .container-xl{background-color:$theme-primary-verylight!important;}
+    
+  
+   .product tr:first-child th{ background-color: rgba(0, 0, 0, 0.6)!important; color:white; }
+   .product table{border: 1px solid $theme-primary;border-top:unset; }
+    .bg-theme-primary-verylight{background-color:$theme-primary!important;}
+
+    
+    .product tr td{
+        background-color:$theme-primary-light!important; 
+        border-color: $theme-primary-verylight!important; 
+    }
+    .product tr:last-child td{border-bottom: unset;}
+    .product tr:hover td{background-color:$theme-primary-verylight!important;}
+
+    .product-total tr:not(:last-child) {         
+        background-color:rgba(255, 255, 255, 0.2)!important; 
+        &:hover td{ background-color:$theme-accent!important;}
+    }    
+    
+    footer .bg-theme-primary{background-color: $theme-primary!important; color:Black!important;}
+    .border-white{border-color: #2c2c2c33!important;}
+    .MuiAccordion-root, .make-column-height-same, .widget{background: #ffc25a!important;}
+    .mob-product-row{
+        border-color: $theme-secondary!important; background-color:#ffcd77!important; 
+        .title{background-color:$theme-secondary!important; color:white!important;}
+    } 
+    .track-ship{
+        tr:hover td{background-color:rgba(255, 255, 255, 0.8)!important}
+        td{
+            border-color:$theme-primary!important; background-color:rgba(255, 255, 255, 0.3)!important;
+        }
+        svg{fill:black;}
+    }    
+    .qrcode:hover{border-color:$theme-accent ;} 
+
+}
+
+

@@ -1,0 +1,16 @@
+@page{ size: A4;  margin:15px!important;}
+@media print{
+    body{background-color: white!important;}
+    .container-xl{     
+        -webkit-box-shadow:unset!important;
+        box-shadow:unset!important;
+        border-radius: 0!important;
+        padding:0!important;margin:0!important;
+    }
+    .dont-break{page-break-inside: avoid;} 
+    .sticky-footer{       
+        position: absolute;
+        bottom: 0; width:100%; 
+        section{ padding: 0!important; }
+    }
+}

@@ -1,0 +1,53 @@
+/* Dark mode */
+
+.dark-mode{   
+    background-color: transparent!important;
+    .container-xl{
+        background-color:$theme-primary-verylight!important;         
+    }
+    header{
+        .logo{background-image: url('./assets/images/logo-white.svg');}
+        background-color:$theme-primary-light!important;   
+     //   background-color:$theme-secondary!important;   
+    }
+    
+  
+   .product tr:first-child th{ background-color:$theme-secondary!important; color:white; }
+   .product table{border: 1px solid $theme-primary-light;border-top:unset; }
+    .my-row-2{background-color:$theme-primary!important;}
+    .my-row-3{background-color:$theme-primary-light!important;}   
+    main{background-color:$theme-primary-light!important;}
+    
+    .product tr td{
+        background-color:$theme-primary-verylight!important; 
+        border-color: $theme-primary-light!important; 
+    }
+    .product tr:last-child td{border-bottom: unset;}
+    .product tr:hover td{background-color:white!important;}
+
+     
+    .product-total tr:not(:last-child) {         
+        background-color:$theme-primary-verylight!important; 
+        border-color: $theme-primary-light!important; 
+        &:hover td{ background-color:white!important;}
+    }    
+    #sec-notes{padding-bottom: 0.75em;}
+    
+    footer .bg-theme-primary{background-color: $theme-primary!important; color:Black!important;}
+    .border-white{border-color: #2c2c2c33!important;}
+    .MuiAccordion-root, .make-column-height-same, .widget{background: #ffc25a!important;}
+    .mob-product-row{
+        border-color: $theme-secondary!important; background-color:#ffcd77!important; 
+        .title{background-color:$theme-secondary!important; color:white!important;}
+    } 
+    .track-ship{
+        tr:hover td{background-color:rgba(255, 255, 255, 0.8)!important}
+        td{
+            border-color:$theme-primary!important; background-color:rgba(255, 255, 255, 0.3)!important;
+        }
+        svg{fill:black;}
+    }    
+    .qrcode:hover{border-color:$theme-accent ;} 
+
+}
+

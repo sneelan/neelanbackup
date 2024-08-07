@@ -1,0 +1,61 @@
+//Theme Changing
+@import "../extra-css/aa_date";
+@import "../extra-css/install_mixin";
+@import "../extra-css/_aroot_colors_black";
+@import "../extra-css/_aroot_variables";
+
+@import "../extra-css/install_grid";
+@import "../extra-css/install_reset";
+@import "../extra-css/install_typography";
+
+
+@import "../extra-css/layout"; 
+@import "../extra-css/layout_header"; 
+@import "../extra-css/layout_footer"; 
+@import "../extra-css/layout_nav"; 
+
+@import "../extra-css/section_common"; 
+@import "../extra-css/section_invoice";
+@import "../extra-css/section_socialicons";
+@import "../extra-css/section_invoice_exception";
+@import "../extra-css/section_invoice_dark_version4";
+@import "../extra-css/section_z_warhammer";
+
+
+
+@include media-breakpoint-max(1024px) {
+    .container-xl.rounded{border-radius: unset!important;}
+}
+
+.header-outer.bg-theme-accent{
+    //background-color:#003255;color:white; margin-top: 0!important;      
+}
+//.border-theme-accent{border-color:#a5114a!important;}
+html{
+}
+body{
+
+    background-color: transparent!important;
+/*    background-color:#a7a7a7 !important;
+    background: url('assets/images/season/ads1.png'), url('assets/images/season/ads1-watch.png'), url('assets/images/season/ads1-bg.png');
+    background-position:  bottom right, top left, top right;
+    background-repeat: no-repeat, no-repeat, repeat-y;
+    background-attachment: fixed, fixed, fixed;    */
+}
+body.py-xl-2{padding-top:0!important ;}
+
+.container-xl{background-color: $theme-accent-verylight!important;}
+
+.dark-mode{
+    /* background-color:#7a7a7a !important; */
+    background-color: transparent!important;
+}
+
+#bg-ad{ 
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    cursor: pointer;
+}
+.container-xl{position: relative;}
